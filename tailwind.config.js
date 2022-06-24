@@ -17,6 +17,12 @@ module.exports = {
     screens:{
       sm: "375px",
       lg: "1440px"
+    },
+    fontSize:{
+      primary: "18px"
+    },
+    fontFamily:{
+      pop: "poppins"
     }
   },
   plugins: [],
