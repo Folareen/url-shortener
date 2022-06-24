@@ -1,10 +1,11 @@
-import Hero from './components/Footer'
+import Hero from './components/Hero'
 import Main from './components/Main'
 import Cta from './components/Cta'
 import Footer from './components/Footer'
 import './index.css'
 
 function App() {
+
   return (
     <>
       <Hero />
