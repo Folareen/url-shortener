@@ -4,45 +4,45 @@ import working from '../images/illustration-working.svg'
 
 const Hero = () => {
   return (
-    <header>
-        <nav>
-            <img src={logo} alt="logo" />
-            <div>
-                <a href="">
+    <header className='container'>
+        <nav className='flex'>
+            <img src={logo} alt="logo"  className=''/>
+            <div className=''>
+                <a href="" className=''>
                     Features
                 </a>
-                <a href="">
+                <a href="" className=''>
                     Pricing
                 </a>
-                <a href="">
+                <a href="" className=''>
                     Resources
                 </a>
             </div>
-            <div>
-                <a href="">
+            <div className=''>
+                <a href="" className=''>
                     Login
                 </a>
-                <a href="">
+                <a href="" className=''>
                     Sign Up
                 </a>
             </div>
-            <button>
+            <button className='inline-flex lg:hidden'>
                 =
             </button>
         </nav>
         <div>
-            <div>
-                <img src={working} alt="working illustration" />
+            <div className=''>
+                <img src={working} alt="working illustration"  className=''/>
             </div>
             <div>
-                <h2>
+                <h2 className=''>
                     More than just shorter links
                 </h2>
-                <p>
+                <p className=''>
                     Build your brand’s recognition and get detailed insights 
                     on how your links are performing.
                 </p>
-                <button>
+                <button className=''>
                     Get Started
                 </button>
             </div>

@@ -2,11 +2,11 @@ import React from 'react'
 
 const Cta = () => {
   return (
-    <section>
-      <h3>
+    <section  classname="">
+      <h3 classname="">
         Boost your links today
       </h3>
-      <button>
+      <button classname="">
         Get Started
       </button>
     </section>

@@ -3,36 +3,36 @@ import logo from '../images/logo.svg'
 
 const Footer = () => {
   return (
-    <footer>
-      <img src={logo} alt="" />
-      <div>
-        <h4>
+    <footer classname="">
+      <img src={logo} alt=""  classname=""/>
+      <div classname="">
+        <h4 classname="">
           Features
         </h4>
-        <a href="">Link Shortening</a>
-        <a href="">Branded Links</a>
-        <a href="">Analytics</a>
+        <a href="" classname="">Link Shortening</a>
+        <a href="" classname="">Branded Links</a>
+        <a href="" classname="">Analytics</a>
       </div>
-      <div>
-        <h4>
+      <div classname="">
+        <h4 classname="">
           Resources
         </h4>
-        <a href="">Blog</a>
-        <a href="">Developers</a>
-        <a href="">Support</a>
+        <a href="" classname="">Blog</a>
+        <a href="" classname="">Developers</a>
+        <a href="" classname="">Support</a>
       </div>
-      <div>
-        <h4>
+      <div classname="">
+        <h4 classname="">
           Company
         </h4>
-        <a href="">About</a>
-        <a href="">Our Team</a>
-        <a href="">Careers</a>
-        <a href="">Contact</a>
+        <a href="" classname="">About</a>
+        <a href="" classname="">Our Team</a>
+        <a href="" classname="">Careers</a>
+        <a href="" classname="">Contact</a>
       </div>
-      <div className="attribution">
+      <div classname="">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Folareen</a>.
+        Coded by <a href="#" classname="">Folareen</a>.
       </div>
     </footer>
   )

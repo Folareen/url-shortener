@@ -16,7 +16,7 @@ module.exports = {
     },
     screens:{
       sm: "375px",
-      lg: "1440px"
+      lg: "1200px"
     },
     fontSize:{
       primary: "18px"
