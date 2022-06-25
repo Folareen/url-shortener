@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .links {
+        @apply p-2 text-Gray
+    }
+
+    .links-nav {
+        @apply p-2 text-white
+    }
+
+    .links-nav:hover {
+        @apply text-Gray
+    }
+
+    .links:hover {
+        @apply text-Gray
+    }
+
+    .stat {
+        @apply relative p-4 bg-white my-8 rounded-lg
+    }
+
+    .stat h4 {
+        @apply text-lg font-bold text-VeryDarkViolet my-2
+    }
+
+    .stat img{
+        @apply absolute bg-DarkViolet rounded-full p-2 -top-5 w-10 right-1/2 translate-x-1/2
+    }
+}

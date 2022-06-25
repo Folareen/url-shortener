@@ -7,13 +7,13 @@ const Header = () => {
         <img src={logo} alt="logo"  className='w'/>
         <nav className="flex flex-col absolute  top-16 bg-DarkViolet text-white  lg:text-Gray rounded-lg p-6 text-center font-semibold  right-5 left-5 z-20">
             <div className='flex flex-col '>
-                <a href="" className='p-2 hover:text-Gray'>
+                <a href="" className='links-nav '>
                     Features
                 </a>
-                <a href="" className='p-2 hover:text-Gray'>
+                <a href="" className='links-nav '>
                     Pricing
                 </a>
-                <a href="" className='border-b-2 p-2 hover:text-Gray'>
+                <a href="" className='border-b-2 links-nav '>
                     Resources
                 </a>
             </div>
