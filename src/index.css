@@ -4,7 +4,11 @@
 
 @layer components {
     .links {
-        @apply p-2 text-Gray
+        @apply p-1 text-Gray
+    }
+    
+    .links:hover{
+        @apply text-Cyan !important
     }
 
     .links-nav {
@@ -29,5 +33,21 @@
 
     .stat img{
         @apply absolute bg-DarkViolet rounded-full p-2 -top-5 w-10 right-1/2 translate-x-1/2
+    }
+
+    .footer h4{
+        @apply text-xl text-white my-4
+    }
+
+    .footer div:not(.socials){
+        @apply flex flex-col
+    }
+
+    .footer h2{
+        @apply text-3xl font-bold text-white my-4
+    }
+
+    .socials img{
+        @apply w-4 block 
     }
 }
