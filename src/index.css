@@ -24,15 +24,19 @@
     }
 
     .stat {
-        @apply relative p-4 bg-white my-8 rounded-lg
+        @apply relative p-8 bg-white my-16 rounded-lg 
     }
 
     .stat h4 {
-        @apply text-lg font-bold text-VeryDarkViolet my-2
+        @apply text-xl font-bold text-VeryDarkViolet my-3 
     }
 
     .stat img {
-        @apply absolute bg-DarkViolet rounded-full p-2 -top-5 w-10 right-1/2 translate-x-1/2
+        @apply absolute bg-DarkViolet rounded-full p-3 -top-9 right-1/2 translate-x-1/2
+    }
+
+    .stat p{
+        @apply text-Gray font-semibold
     }
 
     .footer h4 {
@@ -79,4 +83,8 @@
 .hamburger.active .hamburger-bottom {
     transform: rotate(-45deg);
     transform-origin: 5px;
+}
+
+body,html{
+    overflow-x: hidden;
 }

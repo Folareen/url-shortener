@@ -6,16 +6,16 @@ import fullyCustomizable from '../images/icon-fully-customizable.svg'
 
 const Main = () => {
   return (
-    <main className="bg-GrayishViolet text-center py-4 px-2">
+    <main className="bg-Gray text-center py-4 px-6">
       <LinksContainer />
-      <h3 className="text-xl font-bold">
+      <h3 className="text-2xl font-bold mt-5 text-VeryDarkViolet">
         Advanced Statistics
       </h3>
-      <p className="">
+      <p className="font-semibold text-GrayishViolet">
         Track how your links are performing across the web with our 
         advanced statistics dashboard.
       </p>
-      <div className="p-4 h-max">
+      <div className="h-max">
         <div className="stat">
           <img src={brandRecognition} alt=""  className=""/>
           <h4 className="">
@@ -26,7 +26,7 @@ const Main = () => {
             mean a thing. Branded links help instil confidence in your content.
           </p>
         </div>
-        <div className="stat">
+        <div className="stat ">
           <img src={detailedRecords} alt=""  className=""/>
           <h4 className="">
             Detailed Records

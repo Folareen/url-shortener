@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className='w-full p-4 lg:px-20 relative flex justify-between'>
         <img src={logo} alt="logo"  className='w'/>
-        <nav className={`flex flex-col absolute  top-16 bg-DarkViolet text-white  rounded-lg p-6 text-center font-semibold  right-5 left-5 z-20 lg:hidden ${hamburger ? "" : "hidden" } transition-all`}>
+        <nav className={`flex flex-col absolute  top-16 bg-DarkViolet text-white  rounded-lg p-6 text-center font-semibold  right-5 left-5 z-20 lg:hidden ${hamburger ? "" : "hidden" } transition-all `}>
             <div className='flex flex-col '>
                 <a href="" className='links-nav '>
                     Features
