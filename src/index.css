@@ -6,8 +6,8 @@
     .links {
         @apply p-1 text-Gray
     }
-    
-    .links:hover{
+
+    .links:hover {
         @apply text-Cyan !important
     }
 
@@ -31,23 +31,52 @@
         @apply text-lg font-bold text-VeryDarkViolet my-2
     }
 
-    .stat img{
+    .stat img {
         @apply absolute bg-DarkViolet rounded-full p-2 -top-5 w-10 right-1/2 translate-x-1/2
     }
 
-    .footer h4{
+    .footer h4 {
         @apply text-xl text-white my-4
     }
 
-    .footer div:not(.socials){
+    .footer div:not(.socials) {
         @apply flex flex-col
     }
 
-    .footer h2{
+    .footer h2 {
         @apply text-3xl font-bold text-white my-4
     }
 
-    .socials img{
-        @apply w-4 block 
+    .socials img {
+        @apply w-4 block
     }
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: max-content;
+}
+
+.hamburger div {
+    width: 30px;
+    background-color: hsl(255, 11%, 22%);
+    height: 4px;
+    margin-bottom: 3px;
+    transition: all .5s ease;
+}
+
+.hamburger.active .hamburger-top {
+    transform: rotateZ(45deg);
+    transform-origin: 5px;
+}
+
+.hamburger.active .hamburger-middle {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-bottom {
+    transform: rotate(-45deg);
+    transform-origin: 5px;
 }
