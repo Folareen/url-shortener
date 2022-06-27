@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className='w-full p-4 lg:px-20 relative flex justify-between'>
         <img src={logo} alt="logo"  className='w'/>
-        <nav className={`flex flex-col absolute  top-16 bg-DarkViolet text-white  rounded-lg p-6 text-center font-semibold  right-5 left-5 z-20 lg:hidden ${hamburger ? "" : "hidden" } transition-all `}>
+        <nav className={`flex flex-col absolute bg-DarkViolet text-white  rounded-lg p-6 text-center font-semibold  right-5 left-5 z-20 lg:hidden ${!hamburger ? "-top-[300px]" : "top-16" } transition-all `}>
             <div className='flex flex-col '>
                 <a href="" className='links-nav '>
                     Features
@@ -20,6 +20,28 @@ const Header = () => {
                 </a>
             </div>
             <div className='flex flex-col'>
+                <a href="" className='p-2 hover:text-Gray'>
+                    Login
+                </a>
+                <a href="" className='py-2 px-4 bg-Cyan rounded-3xl hover:bg-cyan-600'>
+                    Sign Up
+                </a>
+            </div>
+        </nav>
+        {/* desktop nav */}
+        <nav className=" flex-row justify-between p-6 text-center font-semibold  right-5 left-5 z-20 hidden lg:flex text-DarkViolet">
+            <div className='flex flex-row '>
+                <a href="" className='links-nav '>
+                    Features
+                </a>
+                <a href="" className='links-nav '>
+                    Pricing
+                </a>
+                <a href="" className='border-b-2 links-nav '>
+                    Resources
+                </a>
+            </div>
+            <div className='flex flex-row'>
                 <a href="" className='p-2 hover:text-Gray'>
                     Login
                 </a>
