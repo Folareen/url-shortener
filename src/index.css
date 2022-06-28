@@ -12,7 +12,7 @@
     }
 
     .links-nav {
-        @apply p-2 text-white
+        @apply p-5 text-white 
     }
 
     .links-nav:hover {
@@ -24,18 +24,18 @@
     }
 
     .stat {
-        @apply relative p-8 bg-white my-16 rounded-lg 
+        @apply relative p-8 bg-white my-16 rounded-lg
     }
 
     .stat h4 {
-        @apply text-xl font-bold text-VeryDarkViolet my-3 
+        @apply text-xl font-bold text-VeryDarkViolet my-3
     }
 
     .stat img {
         @apply absolute bg-DarkViolet rounded-full p-3 -top-9 right-1/2 translate-x-1/2
     }
 
-    .stat p{
+    .stat p {
         @apply text-Gray font-semibold
     }
 
@@ -68,7 +68,12 @@
     background-color: hsl(255, 11%, 22%);
     height: 4px;
     margin-bottom: 3px;
-    transition: all .5s ease;
+    border-radius: 4px;
+}
+
+.mobile-nav,
+.hamburger div {
+    transition: all .5s ease-in-out;
 }
 
 .hamburger.active .hamburger-top {
@@ -85,6 +90,7 @@
     transform-origin: 5px;
 }
 
-body,html{
+body,
+html {
     overflow-x: hidden;
 }

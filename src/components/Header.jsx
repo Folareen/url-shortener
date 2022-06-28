@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <header className='w-full p-4 lg:px-20 relative flex justify-between'>
         <img src={logo} alt="logo"  className='w'/>
-        <nav className={`flex flex-col absolute bg-DarkViolet text-white  rounded-lg p-6 text-center font-semibold  right-5 left-5 z-20 lg:hidden ${!hamburger ? "-top-[300px]" : "top-16" } transition-all `}>
-            <div className='flex flex-col '>
+        <nav className={`flex flex-col absolute bg-DarkViolet text-white  rounded-lg text-center font-semibold  right-[5%] left-[5%] z-20 top-16 lg:hidden overflow-hidden  w-[90%] ${!hamburger ? "h-0 p-0" : "p-6 h-[40vh] " } mobile-nav justify-between `}>
+            <div className='flex flex-col justify-around h-3/5'>
                 <a href="" className='links-nav '>
                     Features
                 </a>
@@ -19,7 +19,7 @@ const Header = () => {
                     Resources
                 </a>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col h-2/5  justify-evenly '>
                 <a href="" className='p-2 hover:text-Gray'>
                     Login
                 </a>
