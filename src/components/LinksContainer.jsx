@@ -29,6 +29,13 @@ const LinksContainer = () => {
     setLink(e.target.value)
   }
 
+  function copyLink(link){
+    navigator.clipboard.writeText(link).then(() => {
+        alert("Copied to clipboard");
+    }
+    )
+  }
+
   return (
     <div className="flex flex-col mb-6 -mt-12 ">
       <form action="" className="bg-DarkViolet px-5 py-8 flex justify-between rounded-md relative">
@@ -61,16 +68,16 @@ const LinksContainer = () => {
         links?
         (
         links.map(
-          (item) =>{
+          (item, index) =>{
             const {short_link, original_link} = item
-            return <div className='bg-white mt-5 rounded-md flex flex-col p-3 text-left'>
+            return <div className='bg-white mt-5 rounded-md flex flex-col p-3 text-left' key={index}>
               <a href='' className="border-b-2 border-DarkViolet py-1">
                 {original_link}
               </a>
               <a href='' className='py-1 text-Cyan font-semibold'>
               {short_link}
               </a>
-              <button className='bg-Cyan rounded-lg py-2 text-white font-bold '>
+              <button className='bg-Cyan rounded-lg py-2 text-white font-bold ' onClick={()=>copyLink(short_link)}>
                 Copy
               </button>
             </div>
@@ -78,7 +85,7 @@ const LinksContainer = () => {
         )
         )
         :
-        ""
+        ("")
       }
     </div>
   )

@@ -12,7 +12,7 @@
     }
 
     .links-nav {
-        @apply p-5 text-white 
+        @apply p-5 text-white
     }
 
     .links-nav:hover {
@@ -21,6 +21,10 @@
 
     .links:hover {
         @apply text-Gray
+    }
+
+    .desktop-nav-links{
+        @apply text-VeryDarkBlue p-2 text-lg 
     }
 
     .stat {
@@ -94,3 +98,9 @@ body,
 html {
     overflow-x: hidden;
 }
+
+.test img {
+    border: 1px solid reds;
+}
+
+.desktop-nav {}
