@@ -15,7 +15,7 @@ const Main = () => {
         Track how your links are performing across the web with our 
         advanced statistics dashboard.
       </p>
-      <div className="h-max">
+      <div className="h-max ">
         <div className="stat">
           <img src={brandRecognition} alt=""  className=""/>
           <h4 className="">
