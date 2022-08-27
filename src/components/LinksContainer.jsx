@@ -37,10 +37,10 @@ const LinksContainer = () => {
   }
 
   return (
-    <div className="flex flex-col mb-6 -mt-12 ">
-      <form action="" className="bg-DarkViolet px-5 py-8 flex rounded-md relative">
-        <input type="text" name="" value={link} onChange={changeLink} id="" placeholder='Shorten a link here...' className={`bg-white rounded-md px-4 py-2 w-full mx-4 ${error ? "border-2 border-rose-500" : "" }` }/>
-        <button type="submit" className={`px-4 py-2 text-white rounded-md font-bold ${loading ? "bg-cyan-200" : "bg-Cyan"} min-w-max`} onClick={(e) => {
+    <div className="flex flex-col mb-6 -mt-12 lg:mx-40 ">
+      <form action="" className="bg-DarkViolet px-5 py-8 flex rounded-md relative lg:flex-row flex-col link--form">
+        <input type="text" name="" value={link} onChange={changeLink} id="" placeholder='Shorten a link here...' className={`bg-white rounded-md px-4 py-2 w-full lg:mx-4 sm:mb-3 ${error ? "border-2 border-rose-500" : "" }` }/>
+        <button type="submit" className={`px-4 py-2 h-max text-white rounded-md font-bold ${loading ? "bg-cyan-200" : "bg-Cyan"} min-w-max`} onClick={(e) => {
           e.preventDefault();
           if(link.length > 1){
             setError(false)
@@ -71,10 +71,10 @@ const LinksContainer = () => {
           (item, index) =>{
             const {short_link, original_link} = item
             return <div className='bg-white mt-5 rounded-md flex flex-col p-3 text-left lg:flex-row lg:justify-between' key={index}>
-              <a href='' className="border-b-2 border-DarkViolet py-1 lg:border-none text-DarkViolet font-semibold">
+              <a href={original_link} className="border-b-2 border-DarkViolet py-1 lg:border-none text-DarkViolet font-semibold">
                 {original_link}
               </a>
-              <a href='' className='py-1 text-Cyan font-semibold'>
+              <a href={short_link} className='py-1 text-Cyan font-semibold'>
               {short_link}
               </a>
               <button className='bg-Cyan rounded-lg py-2 text-white font-bold min-w-max block px-6' onClick={()=>copyLink(short_link)}>

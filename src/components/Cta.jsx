@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cta = () => {
   return (
-    <section  className=" px-4 py-10 text-center bg-DarkViolet text-white">
+    <section  className=" px-4 py-10 text-center bg-DarkViolet text-white cta">
       <h3 className="text-2xl font-bold">
         Boost your links today
       </h3>
