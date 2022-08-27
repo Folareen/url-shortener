@@ -18,7 +18,7 @@ const Main = () => {
       <div className="h-max lg:flex lg:flex-row items-center lg:mx-40 relative">
         <div className='h-full w-2 bg-Cyan absolute translate-x-1/2 right-1/2 lg:w-full lg:h-2 lg:translate-y-1/2 lg:bottom-1/2'>
         </div>
-        <div className="stat mt-[40px]">
+        <div className="stat mt-0">
           <img src={brandRecognition} alt=""  className=""/>
           <h4 className="">
             Brand Recognition
@@ -28,7 +28,7 @@ const Main = () => {
             mean a thing. Branded links help instil confidence in your content.
           </p>
         </div>
-        <div className="stat mt-[80px] lg:mx-7">
+        <div className="stat mt-[100px] lg:mx-7">
           <img src={detailedRecords} alt=""  className=""/>
           <h4 className="">
             Detailed Records
@@ -38,7 +38,7 @@ const Main = () => {
             people engage with your content helps inform better decisions.
           </p>
         </div >
-        <div className="stat mt-[120px]">
+        <div className="stat mt-[200px]">
           <img src={fullyCustomizable} alt=""  className=""/>
           <h4 className="">
             Fully Customizable
