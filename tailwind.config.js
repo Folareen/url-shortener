@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -12,19 +10,19 @@ module.exports = {
         Gray: "hsl(0, 0%, 75%)",
         GrayishViolet: "hsl(257, 7%, 63%)",
         VeryDarkBlue: "hsl(255, 11%, 22%)",
-        VeryDarkViolet: "hsl(260, 8%, 14%)"
+        VeryDarkViolet: "hsl(260, 8%, 14%)",
       },
-      fontSize:{
-        primary: "18px"
+      fontSize: {
+        primary: "18px",
       },
-      fontFamily:{
-        pop: "poppins"
-      }
+      fontFamily: {
+        pop: "poppins",
+      },
     },
-    screens:{
+    screens: {
       sm: "375px",
-      lg: "768px"
-    }
+      lg: "900px",
+    },
   },
   plugins: [],
-}
+};
