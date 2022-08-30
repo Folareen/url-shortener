@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
         <section className='w-full py-4 pl-4 lg:pl-40 relative z-10 lg:mb-10'>
-            <div className='flex flex-col h-4/5 lg:flex-row-reverse lg:mt-10 lg:mb-20'>
+            <div className='flex flex-col h-4/5 lg:flex-row-reverse lg:mt-10 my-10 lg:mb-20'>
                 <motion.div initial='hidden' animate='visible' variants={imgVariants} className='w-full lg:w-1/2 ml-[25px] mr-[-25px]  relative '>
                     <img src={working} alt="working illustration"  className='w-full h-full '/>
                 </motion.div>
