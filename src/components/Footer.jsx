@@ -1,12 +1,32 @@
-import React from 'react'
+import React,{ useEffect} from 'react'
+import { motion, useAnimation } from "framer-motion";
+import {useInView } from "react-intersection-observer";
 import iconFacebook from '../images/icon-facebook.svg'
 import iconInstagram from '../images/icon-instagram.svg'
 import iconPinterest from '../images/icon-pinterest.svg'
 import iconTwitter from '../images/icon-twitter.svg'
 
 const Footer = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const footerVariants = {
+    hidden: {translate: '100%', opacity: 0},
+    visible: {translate: 0, opacity: 1, transition: {duration: 2}}
+  }
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+
+
   return (
-    <footer className="text-center lg:text-left footer flex flex-col bg-VeryDarkViolet p-4 lg:flex-row lg:justify-between lg:px-40 ">
+    <motion.footer initial='hidden' variants={footerVariants} animate={control} ref={ref} className="text-center lg:text-left footer flex flex-col bg-VeryDarkViolet p-4 lg:flex-row lg:justify-between lg:px-40 ">
       <h2 className=''>
         Shortly
       </h2>
@@ -41,7 +61,7 @@ const Footer = () => {
         <img src={iconInstagram} alt="" />
         <img src={iconTwitter} alt="" />
       </div>
-    </footer>
+    </motion.footer>
   )
 }
 

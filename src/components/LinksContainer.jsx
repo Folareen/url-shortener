@@ -1,10 +1,29 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
+import { motion, useAnimation } from "framer-motion";
+import {useInView } from "react-intersection-observer";
+
 
 const LinksContainer = () => {
   const [link, setLink] = useState("")
   const [links, setLinks] = useState([])
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+
+  const linksVariants = {
+    hidden: { scaleY: 0, opacity: 0},
+    visible: {scaleY: 1, opacity: 1, transition: {duration: 1}}
+  }
+
+  useEffect(() => {
+  if (inView) {
+    control.start("visible");
+  } else {
+    control.start("hidden");
+  }
+}, [control, inView]);
 
   async function shorten(){
     try{
@@ -36,8 +55,10 @@ const LinksContainer = () => {
     )
   }
 
+
+
   return (
-    <div className="flex flex-col mb-6 -mt-12 lg:mx-40 ">
+    <motion.div className="flex flex-col mb-6 -mt-12 lg:mx-40 " initial='hidden' animate={control} ref={ref} variants={linksVariants}>
       <form action="" className="bg-DarkViolet px-5 py-8 flex rounded-md relative lg:flex-row flex-col link--form">
         <input type="text" name="" value={link} onChange={changeLink} id="" placeholder='Shorten a link here...' className={`bg-white rounded-md px-4 py-2 w-full lg:mx-4 sm:mb-3 ${error ? "border-2 border-rose-500" : "" }` }/>
         <button type="submit" className={`px-4 py-2 h-max text-white rounded-md font-bold ${loading ? "bg-cyan-200" : "bg-Cyan"} min-w-max`} onClick={(e) => {
@@ -49,7 +70,7 @@ const LinksContainer = () => {
           }else{
             setError(true)
           }
-        }}>{
+        }} disabled={loading}>{
           loading ? 
           "Loading.." :
           "Shorten It!"
@@ -87,7 +108,7 @@ const LinksContainer = () => {
         :
         ("")
       }
-    </div>
+    </motion.div>
   )
 }
 
