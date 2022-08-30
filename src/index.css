@@ -4,7 +4,7 @@
 
 @layer components {
     .links {
-        @apply p-1 text-Gray
+        @apply p-1 text-GrayishViolet
     }
 
     .links:hover {
@@ -16,15 +16,15 @@
     }
 
     .links-nav:hover {
-        @apply text-Gray
+        @apply text-GrayishViolet
     }
 
     .links:hover {
-        @apply text-Gray
+        @apply text-GrayishViolet
     }
 
     .desktop-nav-links{
-        @apply  p-2 text-lg text-Gray
+        @apply  p-2 text-lg text-GrayishViolet
     }
 
     .desktop-nav-links:hover{
@@ -44,7 +44,7 @@
     }
 
     .stat p {
-        @apply text-Gray font-semibold
+        @apply text-GrayishViolet font-semibold
     }
 
     .footer h4 {
